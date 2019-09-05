@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="script.js" charset="utf-8"></script> -->
     <title>VOLUME</title>
 
     <?php
@@ -27,6 +29,23 @@
     <h1>Larghezza = <?php echo $larghezza ?></h1>
     <h1>Altezza = <?php echo $altezza ?></h1>
     <h1>Profondità = <?php echo $profondita ?></h1>
+
+    <div id="volume">
+    </div>
+
+    <script>
+
+    var larghezza = <?php echo $larghezza?>;
+    var altezza = <?php echo $altezza?>;
+    var profondita = <?php echo $profondita?>;
+
+    var volume = (larghezza * altezza * profondita);
+
+    console.log(volume);
+
+    $("#volume").append("<h1>Il volume del parallelepipedo è: " + volume + "</h1>");
+
+    </script>
 
   </body>
 </html>
